@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Biodata</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            width: 300px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            padding: 20px;
+            box-shadow: 2px 2px 12px #aaa;
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: inline-block;
+            width: 100px;
+        }
+        .form-group input,
+        .form-group select {
+            width: calc(100% - 110px);
+            padding: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="date"],
+        .form-group input[type="number"] {
+            width: calc(100% - 110px);
+        }
+        .form-buttons {
+            text-align: center;
+        }
+        .form-buttons button {
+            padding: 5px 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Input Biodata</h2>
+    <form action="proses_biodata.php" method="POST">
+        <div class="form-group">
+            <label for="nik">NIK:</label>
+            <input type="number" id="nik" name="nik" required>
+        </div>
+        <div class="form-group">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+        </div>
+        <div class="form-group">
+            <label for="tempat_lahir">Tempat Lahir:</label>
+            <input type="text" id="tempat_lahir" name="tempat_lahir" required>
+        </div>
+        <div class="form-group">
+            <label for="tanggal_lahir">Tanggal Lahir:</label>
+            <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+        </div>
+        <div class="form-group">
+            <label for="jenis_kelamin">Jenis Kelamin:</label>
+            <input type="text" id="jenis_kelamin" name="jenis_kelamin" required>
+        </div>
+        <div class="form-group">
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" name="alamat" required>
+        </div>
+        <div class="form-group">
+            <label for="agama">Agama:</label>
+            <select id="agama" name="agama" required>
+                <option value="Islam">Islam</option>
+                <option value="Kristen">Kristen</option>
+                <option value="Katolik">Katolik</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Buddha">Buddha</option>
+                <option value="Konghucu">Konghucu</option>
+                <option value="Ateis">Ateis</option>
+            </select>
+        </div>
+        <div class="form-buttons">
+            <button type="submit">Send</button>
+            <button type="reset">Cancel</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
